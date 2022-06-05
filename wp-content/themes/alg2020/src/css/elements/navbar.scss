@@ -1,0 +1,35 @@
+.alg-navbar-wrapper {
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.alg-navbar .alg-logo-color {
+    fill: var(--color-primary);
+    width: auto;
+}
+
+.alg-navbar svg.alg-logo {
+    height: 3rem;
+    width: auto;
+}
+
+// Main Menu Items
+
+.alg-menu-main .alg-menu-item {
+    display: inline-block;
+    font-weight: bold;
+}
+
+.alg-menu-main .alg-menu-item.alg-menu-item-current {
+    color: var(--color-secondary);
+    border-bottom: 2px solid var(--color-secondary);
+}
+
+
+// Navbar main content offset
+#main-content {
+    padding-top: 5.5rem;
+}

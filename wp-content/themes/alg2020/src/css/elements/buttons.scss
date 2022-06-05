@@ -1,0 +1,29 @@
+.alg-button {
+    display: inline-flex;
+    padding: 1em 1.5em;
+    border: 2px solid var(--btn-border);
+    border-radius: 2px;
+    line-height: 0.8;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+
+    color: var(--btn-color);
+
+    background-color: var(--btn-bg);
+
+    --btn-bg: transparent;
+    --btn-border: var(--color-primary);
+    --btn-color: var(--color-primary);
+}
+
+.alg-button.alg-button-sec {
+    --btn-bg: transparent;
+    --btn-color: var(--color-secondary);
+    --btn-border: var(--color-secondary);
+}
+
+.alg-button.alg-button-high {
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+}

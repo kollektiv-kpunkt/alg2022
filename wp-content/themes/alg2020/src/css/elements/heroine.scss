@@ -1,0 +1,40 @@
+#alg-heroine-inner {
+    height: min(50vh, 540px);
+    position: relative;
+}
+
+#alg-heroine-inner #alg-heroine-bg {
+    width: 100%;
+    height: 100%;
+}
+
+#alg-heroine-inner #alg-heroine-bg #alg-heroine-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#alg-heroine-titles {
+    position: absolute;
+    bottom: 6rem;
+}
+
+#alg-titles-rotator {
+    transform: rotate(-5deg) translateX(-2em);
+}
+
+.alg-title-wrapper {
+    font-size: 3.5rem;
+    font-family: "Passion One", cursive;
+    text-transform: uppercase;
+    padding: 0.2em;
+    padding-bottom: calc(0.2em - 5px);
+    padding-left: 1.75em;
+    background-color: white;
+    color: var(--color-primary);
+}
+
+.alg-title-wrapper.alg-title-last {
+    background-color: var(--color-secondary);
+    color: white;
+}

@@ -8,9 +8,9 @@ $dotenv->safeLoad();
 function alg_scripts() {
     // wp_enqueue_style( 'fa', get_template_directory_uri() . "/lib/font-awesome/css/font-awesome.min.css", [], "1.0.0" );
     // wp_enqueue_style( 'glowCookies', get_template_directory_uri() . "/lib/glowCookies/glowCookies.css", [], "1.0.0" );
-    // wp_enqueue_style( 'theme', get_template_directory_uri() . '/dist/theme.css', [], "1.0.0" );
     // wp_enqueue_style( 'fonts', get_template_directory_uri() . '/dist/fonts/fonts.css', [], "1.0.0" );
     // wp_enqueue_script( 'glowCookies', get_template_directory_uri() . "/lib/glowCookies/glowCookies.js", array(), "1.0.0", true );
+    wp_enqueue_style( 'theme', get_template_directory_uri() . '/dist/theme.css', [], "1.0.0" );
     wp_enqueue_style( 'bundle', get_template_directory_uri() . '/dist/style.css', [], "1.0.0" );
     wp_enqueue_script( 'bundle', get_template_directory_uri() . '/dist/app.js', array(), "1.0.0", true );
 }
@@ -94,3 +94,22 @@ function alg_acf() {
     // }
 }
 alg_acf();
+
+add_action('acf/init', 'alg_blocktypes');
+function alg_blocktypes() {
+
+    // Check function exists.
+    if( function_exists('acf_register_block_type') ) {
+
+        // register a testimonial block.
+        acf_register_block_type(array(
+            'name'              => 'heroine',
+            'title'             => __('Heroine'),
+            'description'       => __('Hero Section für auf der Startseite'),
+            'render_template'   => 'template-parts/blocks/testimonial/heroine.php',
+            'category'          => 'alg2020',
+            'icon'              => 'dashicons-superhero',
+            'keywords'          => array( 'hero', 'heroine', 'intro' ),
+        ));
+    }
+}

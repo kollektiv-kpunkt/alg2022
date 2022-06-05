@@ -1,0 +1,3 @@
+Required Plugins
+- SEO Framework
+- ACF Image aspect ratio
