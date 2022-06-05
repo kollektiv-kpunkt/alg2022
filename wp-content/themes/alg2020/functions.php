@@ -101,15 +101,24 @@ function alg_blocktypes() {
     // Check function exists.
     if( function_exists('acf_register_block_type') ) {
 
-        // register a testimonial block.
         acf_register_block_type(array(
             'name'              => 'heroine',
             'title'             => __('Heroine'),
             'description'       => __('Hero Section für auf der Startseite'),
-            'render_template'   => 'template-parts/blocks/testimonial/heroine.php',
+            'render_template'   => 'template-parts/blocks/heroine/heroine.php',
             'category'          => 'alg2020',
             'icon'              => 'dashicons-superhero',
             'keywords'          => array( 'hero', 'heroine', 'intro' ),
+        ));
+
+        acf_register_block_type(array(
+            'name'              => 'intro',
+            'title'             => __('Intro'),
+            'description'       => __('Intro section für auf die Startseite.'),
+            'render_template'   => 'template-parts/blocks/intro/intro.php',
+            'category'          => 'alg2020',
+            'icon'              => '',
+            'keywords'          => array( 'Intro', 'info', 'home' ),
         ));
     }
 }

@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Passion+One:wght@700&display=swap);
+@charset "UTF-8";
 :root {
   --color-primary: #84B414;
   --color-secondary: #E10078;
@@ -15,8 +16,10 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2 {
   font-family: "Passion One", cursive;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
 }
 
 .lg-container {
@@ -29,6 +32,23 @@ h1, h2, h3, h4, h5, h6 {
     width: 95vw;
   }
 }
+.md-container {
+  width: 95vw;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.alg-2col {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 4rem;
+}
+
+.alg-2col > div {
+  width: calc(50% - 2rem);
+}
+
 .alg-button {
   display: inline-flex;
   padding: 1em 1.5em;
@@ -43,6 +63,7 @@ h1, h2, h3, h4, h5, h6 {
   --btn-bg: transparent;
   --btn-border: var(--color-primary);
   --btn-color: var(--color-primary);
+  transition: 0.125s ease-in-out opacity;
 }
 
 .alg-button.alg-button-sec {
@@ -51,9 +72,26 @@ h1, h2, h3, h4, h5, h6 {
   --btn-border: var(--color-secondary);
 }
 
+.alg-button:hover {
+  opacity: 0.8;
+}
+
 .alg-button.alg-button-high {
   padding-top: 1.5em;
   padding-bottom: 1.5em;
+}
+
+.alg-more-button::after {
+  content: "›";
+  font-size: 1.5em;
+  line-height: 0.5;
+  margin-left: 0.25em;
+  margin-top: -0.05em;
+  transition: 0.125s ease-in-out transform;
+}
+
+.alg-more-button:hover::after {
+  transform: translateX(0.125em);
 }
 
 .alg-navbar-wrapper {
@@ -62,6 +100,7 @@ h1, h2, h3, h4, h5, h6 {
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 100;
 }
 
 .alg-navbar .alg-logo-color {
@@ -128,4 +167,49 @@ h1, h2, h3, h4, h5, h6 {
 .alg-title-wrapper.alg-title-last {
   background-color: var(--color-secondary);
   color: white;
+}
+
+.alg-intro-wrapper {
+  margin-top: -3rem;
+  position: relative;
+  z-index: 1;
+}
+
+.alg-intro-wrapper .alg-2col {
+  flex-wrap: nowrap;
+  gap: 0;
+  position: relative;
+}
+
+.alg-2col .alg-intro-box {
+  width: calc(50% + 2rem);
+  position: absolute;
+  transition: 0.25s ease-in-out transform, 0.25s ease-in-out opacity;
+}
+
+.alg-2col .alg-intro-box.alg-intro-box-first {
+  background-color: var(--color-snow);
+  left: 0;
+  top: 0;
+  padding: 2.5rem;
+  padding-right: 6.5rem;
+  --box-title-color: var(--color-primary);
+}
+
+.alg-2col .alg-intro-box.inViewport {
+  transform: translateX(0) !important;
+  opacity: 1 !important;
+}
+
+.alg-2col .alg-intro-box.alg-intro-box-second {
+  background-color: var(--color-grey);
+  left: calc(50% - 2rem);
+  top: 5rem;
+  padding: 2.5rem;
+  padding-left: 4rem;
+  --box-title-color: var(--color-secondary);
+}
+
+.alg-2col .alg-intro-box h1 {
+  color: var(--box-title-color);
 }

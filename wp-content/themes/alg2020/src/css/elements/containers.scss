@@ -8,3 +8,20 @@
         width: 95vw;
     }
 }
+
+.md-container {
+    width: 95vw;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.alg-2col {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 4rem;
+}
+
+.alg-2col > div {
+    width: calc(50% - 2rem);
+}
