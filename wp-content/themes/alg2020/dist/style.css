@@ -1,0 +1,131 @@
+@import url(https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Passion+One:wght@700&display=swap);
+:root {
+  --color-primary: #84B414;
+  --color-secondary: #E10078;
+  --color-snow: #f4f4f4;
+  --color-grey: #E2E2E2;
+  --color-dark: #545454;
+}
+
+html {
+  font-size: 18px;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Passion One", cursive;
+}
+
+.lg-container {
+  width: calc(100vw - 5rem);
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 980px) {
+  .lg-container {
+    width: 95vw;
+  }
+}
+.alg-button {
+  display: inline-flex;
+  padding: 1em 1.5em;
+  border: 2px solid var(--btn-border);
+  border-radius: 2px;
+  line-height: 0.8;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  color: var(--btn-color);
+  background-color: var(--btn-bg);
+  --btn-bg: transparent;
+  --btn-border: var(--color-primary);
+  --btn-color: var(--color-primary);
+}
+
+.alg-button.alg-button-sec {
+  --btn-bg: transparent;
+  --btn-color: var(--color-secondary);
+  --btn-border: var(--color-secondary);
+}
+
+.alg-button.alg-button-high {
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+}
+
+.alg-navbar-wrapper {
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.alg-navbar .alg-logo-color {
+  fill: var(--color-primary);
+  width: auto;
+}
+
+.alg-navbar svg.alg-logo {
+  height: 3rem;
+  width: auto;
+}
+
+.alg-menu-main .alg-menu-item {
+  display: inline-block;
+  font-weight: bold;
+}
+
+.alg-menu-main .alg-menu-item.alg-menu-item-current {
+  color: var(--color-secondary);
+  border-bottom: 2px solid var(--color-secondary);
+}
+
+#main-content {
+  padding-top: 5.5rem;
+}
+
+#alg-heroine-inner {
+  height: min(50vh, 540px);
+  position: relative;
+}
+
+#alg-heroine-inner #alg-heroine-bg {
+  width: 100%;
+  height: 100%;
+}
+
+#alg-heroine-inner #alg-heroine-bg #alg-heroine-img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#alg-heroine-titles {
+  position: absolute;
+  bottom: 6rem;
+}
+
+#alg-titles-rotator {
+  transform: rotate(-5deg) translateX(-2em);
+}
+
+.alg-title-wrapper {
+  font-size: 3.5rem;
+  font-family: "Passion One", cursive;
+  text-transform: uppercase;
+  padding: 0.2em;
+  padding-bottom: calc(0.2em - 5px);
+  padding-left: 1.75em;
+  background-color: white;
+  color: var(--color-primary);
+}
+
+.alg-title-wrapper.alg-title-last {
+  background-color: var(--color-secondary);
+  color: white;
+}
