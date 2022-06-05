@@ -1,3 +1,7 @@
+# ALG2020
+/lib/acf/*
+!/lib/acf/acf-json
+
 composer.phar
 /vendor/
 
