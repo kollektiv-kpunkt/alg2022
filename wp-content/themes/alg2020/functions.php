@@ -93,4 +93,4 @@ function alg_acf() {
     //     return false;
     // }
 }
-add_action( "admin_init", 'alg_acf' );
+alg_acf();
