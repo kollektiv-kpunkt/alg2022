@@ -1,0 +1,15 @@
+{
+    "name": "timot/alg2020",
+    "description": "Webpage for \"Alternative - die Gr\u0000ne Zug\" for their 2022 election campaign.",
+    "type": "wordpress-theme",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "timothyoesch",
+            "email": "54284649+timothyoesch@users.noreply.github.com"
+        }
+    ],
+    "require": {
+        "pecee/simple-router": "4.3.7.2"
+    }
+}
