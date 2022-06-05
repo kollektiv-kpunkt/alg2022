@@ -1,4 +1,4 @@
-<div class="alg-intro-wrapper">
+<div class="alg-intro-wrapper mb-20">
     <div class="md-container alg-2col">
         <?php
         $boxes = get_field("intro_boxen");

@@ -63,6 +63,18 @@ function alg_enable_flush_rules() {
 }
 add_action( "admin_init", 'alg_enable_flush_rules' );
 
+/* Element Shortcode */
+function alg_element_shortcode($atts) {
+    $args = shortcode_atts( array(
+        "elem" => "",
+    ), $atts, "alg-element" );
+    ob_start();
+    get_template_part("template-parts/elements/{$args['elem']}", "", $atts);
+    return ob_get_clean();
+}
+
+add_shortcode('alg-element', 'alg_element_shortcode');
+
 
 // ACF
 

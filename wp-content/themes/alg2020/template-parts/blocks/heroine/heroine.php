@@ -4,7 +4,7 @@
             <img src="<?= get_field("heroine_image")["url"] ?>" alt="" id="alg-heroine-img">
         </div>
         <div id="alg-heroine-titles">
-            <div id="alg-titles-rotator">
+            <div class="alg-titles-rotator">
                 <div id="alg-titles-wrapper" class="flex flex-col gap-2">
                     <?php
                     $titles = get_field("heroine_titles");

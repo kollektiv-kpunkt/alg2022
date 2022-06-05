@@ -1,0 +1,68 @@
+.alg-thema-slide-wrapper {
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+}
+
+.alg-thema-slide-wrapper.alg-thema-slide-active {
+    opacity: 1;
+    visibility: visible;
+    display: flex;
+}
+
+.alg-thema-slide-content h3 {
+    font-weight: bold;
+    color: var(--color-primary);
+    font-size: 1.5rem;
+}
+
+.alg-thema-slide-content p {
+    font-size: 1.25rem;
+}
+
+.alg-thema-slide-image-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.alg-thema-slide-image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+    filter: var(--dropshadow);
+    padding-bottom: calc(100% / 16 * 9);
+}
+
+.alg-thema-slide-image-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.alg-thema-titles .alg-title-wrapper {
+    font-size: 2.5rem;
+}
+
+.alg-thema-titles {
+    position: absolute;
+    bottom: 3rem;
+    z-index: 1;
+}
+
+.alg-thema-pagination {
+    margin-top: -4px;
+}
+
+.alg-thema-page {
+    width: 1rem;
+    height: 4px;
+    background-color: var(--color-grey);
+}
+
+.alg-thema-page.alg-thema-page-active {
+    background-color: var(--color-secondary);
+}

@@ -799,9 +799,34 @@ Ensure the default browser behavior of the `hidden` attribute.
   position: relative;
 }
 
+.my-20{
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
 .my-auto{
   margin-top: auto;
   margin-bottom: auto;
+}
+
+.ml-auto{
+  margin-left: auto;
+}
+
+.mr-0{
+  margin-right: 0px;
+}
+
+.mt-9{
+  margin-top: 2.25rem;
+}
+
+.mb-4{
+  margin-bottom: 1rem;
+}
+
+.mb-20{
+  margin-bottom: 5rem;
 }
 
 .mb-2{
@@ -810,6 +835,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .mb-6{
   margin-bottom: 1.5rem;
+}
+
+.mb-8{
+  margin-bottom: 2rem;
 }
 
 .block{
@@ -854,6 +883,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   flex-direction: column;
 }
 
+.flex-wrap{
+  flex-wrap: wrap;
+}
+
 .justify-between{
   justify-content: space-between;
 }
@@ -870,10 +903,33 @@ Ensure the default browser behavior of the `hidden` attribute.
   gap: 0.5rem;
 }
 
+.gap-x-8{
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
+}
+
+.gap-y-6{
+  row-gap: 1.5rem;
+}
+
+.gap-y-2{
+  row-gap: 0.5rem;
+}
+
+.gap-x-2{
+  -moz-column-gap: 0.5rem;
+       column-gap: 0.5rem;
+}
+
 .truncate{
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+.py-10{
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
 }
 
 .py-3{
@@ -884,6 +940,21 @@ Ensure the default browser behavior of the `hidden` attribute.
 .px-2{
   padding-left: 0.5rem;
   padding-right: 0.5rem;
+}
+
+.py-6{
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.py-8{
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.text-xs{
+  font-size: 0.75rem;
+  line-height: 1rem;
 }
 
 .text-5xl{

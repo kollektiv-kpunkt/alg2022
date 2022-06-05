@@ -1,0 +1,65 @@
+{
+    "key": "group_629ccbae9f191",
+    "title": "Details: Themen Slogans",
+    "fields": [
+        {
+            "key": "field_629ccbc2f0c86",
+            "label": "Slogans",
+            "name": "slogans",
+            "type": "repeater",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "field_629ccbd0f0c87",
+            "min": 2,
+            "max": 3,
+            "layout": "row",
+            "button_label": "Weitere Zeile",
+            "sub_fields": [
+                {
+                    "key": "field_629ccbd0f0c87",
+                    "label": "Slogan",
+                    "name": "slogan",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "thema"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1654443002
+}

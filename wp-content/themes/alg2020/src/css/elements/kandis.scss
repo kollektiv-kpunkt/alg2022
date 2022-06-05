@@ -1,0 +1,42 @@
+.kandis-section-wrapper {
+    background-color: var(--color-snow);
+}
+
+.kandi-grid-section {
+    --cols: 7;
+    --gutter: 2rem;
+}
+
+.kandi-grid-section .kandi-wrapper {
+    width: calc(100% / var(--cols) - (var(--cols) - 1) * var(--gutter) / var(--cols));
+    filter: var(--dropshadow)
+}
+
+.kandi-image-container {
+    position: relative;
+    padding-bottom: 100%;
+}
+
+.kandi-image-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px 4px 0 0;
+}
+
+.kandi-content-wrapper {
+    background-color: white;
+    padding: 0.5rem;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.kandi-title {
+    font-weight: bold;
+    line-height: 1.1;
+    color: var(--color-primary);
+    margin-bottom: 0.25rem;
+}

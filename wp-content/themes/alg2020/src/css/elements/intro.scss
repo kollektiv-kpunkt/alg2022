@@ -7,18 +7,16 @@
 .alg-intro-wrapper .alg-2col {
     flex-wrap: nowrap;
     gap: 0;
-    position: relative;
 }
 
 .alg-2col .alg-intro-box {
     width: calc(50% + 2rem);
-    position: absolute;
+    height: fit-content;
     transition: 0.25s ease-in-out transform, 0.25s ease-in-out opacity;
 }
 .alg-2col .alg-intro-box.alg-intro-box-first {
     background-color: var(--color-snow);
-    left: 0;
-    top: 0;
+    margin-right: -2rem;
     padding: 2.5rem;
     padding-right: 6.5rem;
     --box-title-color: var(--color-primary);
@@ -31,8 +29,8 @@
 
 .alg-2col .alg-intro-box.alg-intro-box-second {
     background-color: var(--color-grey);
-    left: calc(50% - 2rem);
-    top: 5rem;
+    margin-left: -2rem;
+    margin-top: 5rem;
     padding: 2.5rem;
     padding-left: 4rem;
     --box-title-color: var(--color-secondary);
