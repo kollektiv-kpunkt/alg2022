@@ -22,6 +22,12 @@ $query = new WP_Query( $args );
                 <div class="kandi-wrapper">
                     <div class="kandi-image-container">
                         <?php the_post_thumbnail('medium'); ?>
+                        <?php
+                        if (get_field("bisher")) : ?>
+                            <div class="alg-kandi-bisher leading-none">Bisher</div>
+                        <?php
+                        endif;
+                        ?>
                     </div>
                     <div class="kandi-content-wrapper">
                         <h3 class="kandi-title"><?php the_title(); ?></h3>

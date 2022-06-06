@@ -1,0 +1,26 @@
+.alg-catcher-wrapper {
+    background-color: var(--color-secondary);
+    color: white;
+    overflow-y: hidden;
+    max-height: 5rem;
+    transition: 0.5s ease-in-out max-height;
+}
+
+.alg-catcher-wrapper b {
+    color: #D3F585;
+}
+
+.alg-catcher-close {
+    height: 5rem;
+    width: 5rem;
+    margin-right: -2.5rem;
+    background-color: #F07FBB;
+    color: #870048;
+    font-size: 4rem;
+    line-height: 0.55;
+    cursor: pointer;
+}
+
+.alg-catcher-close span {
+    transform: translateY(-3px);
+}

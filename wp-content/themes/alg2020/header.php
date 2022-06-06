@@ -10,6 +10,9 @@
 </head>
 <body>
     <?php
+    if (!isset($_COOKIE["alg-catcher-closed"])) {
+        get_template_part( "template-parts/catcher/index");
+    }
     get_template_part( "template-parts/navbar/index");
     ?>
     <div id="main-content">
