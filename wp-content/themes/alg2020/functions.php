@@ -76,6 +76,20 @@ function alg_element_shortcode($atts) {
 add_shortcode('alg-element', 'alg_element_shortcode');
 
 
+/* Widgets */
+
+function alg_widgets_init() {
+
+	register_sidebar( array(
+		'name'          => 'Footer Widget',
+		'id'            => 'footer_widget',
+		'before_widget' => '<div class="alg-footer-widget">',
+		'after_widget'  => '</div>'
+	) );
+
+}
+add_action( 'widgets_init', 'alg_widgets_init' );
+
 // ACF
 
 function alg_acf() {
@@ -131,6 +145,16 @@ function alg_blocktypes() {
             'category'          => 'alg2020',
             'icon'              => '',
             'keywords'          => array( 'Intro', 'info', 'home' ),
+        ));
+
+        acf_register_block_type(array(
+            'name'              => 'rrspacer',
+            'title'             => __('RR Spacer'),
+            'description'       => __('Spacer für die Regierungsratskandidatin auf der Startseite.'),
+            'render_template'   => 'template-parts/blocks/spacer/spacer.php',
+            'category'          => 'alg2020',
+            'icon'              => '',
+            'keywords'          => array( 'spacer', 'rr', 'regierungsrat' ),
         ));
     }
 }

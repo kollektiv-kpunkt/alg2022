@@ -1,0 +1,15 @@
+.alg-map-container {
+    max-width: 900px;
+    margin: auto;
+}
+
+.alg-map-container svg path.alg-wahlkreis {
+    fill: var(--color-snow);
+    stroke: var(--color-primary);
+    stroke-width: 2px;
+    cursor: pointer;
+}
+
+.alg-map-container svg path.alg-wahlkreis:focus {
+    outline: none;
+}

@@ -1,0 +1,35 @@
+{
+    "baar" : {
+        "name" : "Baar"
+    },
+    "cham" : {
+        "name" : "Cham"
+    },
+    "huenenberg" : {
+        "name" : "Hünenberg"
+    },
+    "menzingen" : {
+        "name" : "Menzingen"
+    },
+    "neuheim" : {
+        "name" : "Neuheim"
+    },
+    "oberaegeri" : {
+        "name" : "Oberägeri"
+    },
+    "risch" : {
+        "name" : "Risch"
+    },
+    "steinhausen" : {
+        "name" : "Steinhausen"
+    },
+    "unteraegeri" : {
+        "name" : "Unterägeri"
+    },
+    "walchwil" : {
+        "name" : "Walchwil"
+    },
+    "zug" : {
+        "name" : "Zug"
+    }
+}

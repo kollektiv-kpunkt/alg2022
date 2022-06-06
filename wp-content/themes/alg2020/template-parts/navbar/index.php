@@ -3,7 +3,7 @@
         <div class="alg-navbar flex justify-between py-3">
             <a href="/" class="my-auto">
                 <?=
-                file_get_contents(__DIR__ . "/img/logo.svg");
+                file_get_contents(__DIR__ . "/../img/logo.svg");
                 ?>
             </a>
             <div class="alg-menu-main flex gap-10 my-auto">

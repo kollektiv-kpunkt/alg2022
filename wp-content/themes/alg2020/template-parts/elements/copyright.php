@@ -1,0 +1,1 @@
+<p class="text-sm">© <?= date("Y") ?>, Alternative - die Grüne Zug</p>

@@ -6,6 +6,10 @@
     color: var(--color-dark);
 }
 
+.alg-section-subtitle.alg-section-subtitle-neg {
+    color: white;
+}
+
 .alg-section-subtitle::after {
     content: "";
     display: block;
@@ -13,6 +17,10 @@
     width: 2rem;
     height: 2px;
     background-color: var(--color-dark);
+}
+
+.alg-section-subtitle.alg-section-subtitle-neg::after {
+    background-color: white;
 }
 
 .alg-section-title {

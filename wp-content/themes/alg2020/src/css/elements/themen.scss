@@ -3,6 +3,7 @@
     opacity: 0;
     visibility: hidden;
     display: none;
+    transition: 0.5s ease-in-out opacity, 0.5s ease-in-out visibility;
 }
 
 .alg-thema-slide-wrapper.alg-thema-slide-active {
@@ -24,14 +25,15 @@
 .alg-thema-slide-image-wrapper {
     position: relative;
     overflow: hidden;
+    filter: var(--dropshadow);
 }
 
 .alg-thema-slide-image-container {
     position: relative;
     overflow: hidden;
     border-radius: 4px;
-    filter: var(--dropshadow);
     padding-bottom: calc(100% / 16 * 9);
+    background-color: var(--color-primary);
 }
 
 .alg-thema-slide-image-container img {
@@ -61,6 +63,7 @@
     width: 1rem;
     height: 4px;
     background-color: var(--color-grey);
+    transition: 0.5s ease-in-out background-color;
 }
 
 .alg-thema-page.alg-thema-page-active {

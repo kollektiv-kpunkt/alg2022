@@ -25,6 +25,12 @@
     --btn-border: var(--color-secondary);
 }
 
+.alg-button.alg-button-neg {
+    --btn-bg: transparent;
+    --btn-color: white;
+    --btn-border: white;
+}
+
 .alg-button:hover {
     opacity: 0.8;
 }

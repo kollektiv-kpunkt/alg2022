@@ -1,0 +1,33 @@
+.alg-rr-outer {
+    background-image: linear-gradient(to bottom, white 3.5rem, var(--color-secondary) 3.5rem, var(--color-secondary) calc(100% - 3.5rem), white calc(100% - 3.5rem));
+}
+
+.alg-rr-img-inner {
+    position: relative;
+    padding-bottom: 100%;
+    transition: 0.5s ease-in-out transform, 0.5s ease-in-out opacity;
+}
+
+.alg-rr-img-inner.inViewport {
+    transform: translateX(0) !important;
+    opacity: 1 !important;
+}
+
+.alg-rr-img-inner img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: var(--dropshadow);
+}
+
+.alg-rr-titel {
+    font-size: 4rem;
+    line-height: 1;
+}
+
+.alg-rr-subtitel {
+    font-size: 2.5rem;
+}

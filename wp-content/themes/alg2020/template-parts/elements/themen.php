@@ -21,6 +21,12 @@ $query = new WP_Query( $args );
             if ($i == 0) {
                 $classes .= ' alg-thema-slide-active';
             }
+            $permalinkParts = explode("/", get_the_permalink());
+            if (end($permalinkParts) === "") {
+                $link = $permalinkParts[count($permalinkParts) - 2];
+            } else {
+                $link = end($permalinkParts);
+            }
             ?>
             <div class="<?= $classes ?>" data-slide-id="<?= $i ?>">
                 <div class="alg-thema-slide-content my-auto py-8">
@@ -28,7 +34,7 @@ $query = new WP_Query( $args );
                     <div class="alg-thema-slide-excerpt mb-8">
                         <?php the_excerpt(); ?>
                     </div>
-                    <a href="<?php the_permalink(); ?>" class="alg-button alg-more-button">Mehr lesen</a>
+                    <a href="<?= $_ENV["PPOSITIONEN"] . "#" . $link ?>" class="alg-button alg-more-button">Mehr lesen</a>
                 </div>
                 <div class="alg-thema-slide-image-wrapper my-auto">
                     <div class="alg-thema-slide-image-container">

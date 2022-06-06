@@ -17,6 +17,7 @@
 /wp-*.php
 /xmlrpc.php
 /wp-content/plugins
+/wp-content/backups-*
 
 # Configuration
 wp-config.php

@@ -1,0 +1,21 @@
+.alg-footer-wrapper {
+    background-color: var(--color-primary);
+}
+
+.alg-footer-widget:nth-child(1) {
+    margin-bottom: 2.5rem;
+}
+
+.alg-footer-widget:nth-child(2) {
+    margin-bottom: -1.75em;
+}
+
+footer .alg-logo {
+    height: 3rem;
+    width: auto;
+}
+
+footer .alg-bottom-bar {
+    background-color: var(--color-secondary);
+    height: 1rem
+}
