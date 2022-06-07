@@ -5,6 +5,14 @@
     left: 0;
     width: 100%;
     z-index: 100;
+    transform: translateY(0);
+    opacity: 1;
+    transition: 0.25s ease-in-out transform, 0.25s ease-in-out opacity;
+}
+
+.alg-navbar-wrapper.alg-navbar-hide {
+    transform: translateY(-100%);
+    opacity: 0;
 }
 
 .alg-navbar .alg-logo-color {

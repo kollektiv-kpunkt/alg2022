@@ -9,4 +9,9 @@ if (document.querySelector(".alg-catcher-wrapper")) {
         expires: 2,
       });
     });
+  document
+    .querySelector(".alg-catcher-content")
+    .addEventListener("click", function () {
+      window.location.href = "https://tabeazimmermann.ch/";
+    });
 }

@@ -4,6 +4,13 @@
     overflow-y: hidden;
     max-height: 5rem;
     transition: 0.5s ease-in-out max-height;
+    position: relative;
+    z-index: 101;
+}
+
+.alg-catcher-content {
+    width: 100%;
+    cursor: pointer;
 }
 
 .alg-catcher-wrapper b {

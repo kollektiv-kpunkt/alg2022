@@ -2,6 +2,7 @@ function toggleKandiOn(id) {
   var kandiWrapper = document.querySelector(
     `.kandi-wrapper[data-kandi='${id}']`
   );
+  history.pushState({}, null, "/kandi/" + kandiWrapper.id);
   kandiWrapper.classList.add("kandi-active");
   var kandiDetails = kandiWrapper.querySelector(".kandi-details-wrapper");
   var kandiDetailsArrow = kandiWrapper.querySelector(".kandi-details-arrow");
@@ -52,6 +53,14 @@ if (document.querySelector(".alg-gemeinde-kandi-grid")) {
     element.addEventListener("click", function () {
       if (element.parentElement.classList.contains("kandi-active")) {
         toggleKandiOff(element.getAttribute("data-kandi"));
+        if (
+          document.querySelector(".alg-gemeinde-intro-wrapper[data-gemeinde]")
+        ) {
+          var gemeinde = document
+            .querySelector(".alg-gemeinde-intro-wrapper")
+            .getAttribute("data-gemeinde");
+          history.pushState({}, null, "/gemeinde/" + gemeinde);
+        }
         return;
       }
       if (document.querySelector(".kandi-wrapper.kandi-active")) {
@@ -66,3 +75,14 @@ if (document.querySelector(".alg-gemeinde-kandi-grid")) {
     });
   });
 }
+
+window.addEventListener("DOMContentLoaded", function () {
+  if (
+    document.querySelector(".alg-gemeinde-kandi-grid") &&
+    window.location.href.includes("?#kandi")
+  ) {
+    const slug = window.location.href.split("?#kandi=")[1];
+    const kandi = document.getElementById(slug).getAttribute("data-kandi");
+    toggleKandiOn(kandi);
+  }
+});

@@ -12,7 +12,7 @@ while ($args["kandis"]->have_posts()) :
         $details[] = get_field("byline");
     }
 ?>
-<div class="kandi-wrapper" data-kandi="kandi-<?= the_ID() ?>">
+<div class="kandi-wrapper" data-kandi="kandi-<?= the_ID() ?>" id="<?= $post->post_name ?>">
     <div class="kandi-inner" data-kandi="kandi-<?= the_ID() ?>">
         <div class="kandi-image-container">
             <?php the_post_thumbnail( 'large'); ?>
