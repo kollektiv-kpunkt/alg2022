@@ -22,6 +22,15 @@
 .alg-menu-main .alg-menu-item {
     display: inline-block;
     font-weight: bold;
+    border-bottom: 2px solid transparent;
+    transition: 0.125s ease-in-out border-bottom, 0.125s ease-in-out color;
+}
+
+.alg-menu-main .alg-menu-item:hover {
+    display: inline-block;
+    font-weight: bold;
+    border-bottom: 2px solid var(--color-primary);
+    color: var(--color-primary);
 }
 
 .alg-menu-main .alg-menu-item.alg-menu-item-current {

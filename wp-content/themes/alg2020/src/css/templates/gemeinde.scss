@@ -1,0 +1,143 @@
+.alg-gemeinde-intro-wrapper {
+    background-color: #C2DA8A;
+}
+
+.alg-gemeinde-intro-map .alg-map-container svg path.alg-wahlkreis {
+    stroke: var(--color-dark);
+    stroke-width: 1px;
+}
+
+.alg-gemeinde-intro-map .alg-map-container svg path.alg-wahlkreis.alg-wahlkreis-active {
+    stroke: var(--color-secondary);
+    fill: var(--color-secondary)
+}
+
+.alg-gemeinde-gremium {
+    padding-top: 2rem;
+}
+
+.alg-gemeinde-gremium + .alg-gemeinde-gremium {
+    padding-top: 3.5rem;
+}
+
+.alg-gemeinde-kandi-grid {
+    --cols: 4;
+    --gutter: 2.5rem;
+    margin-top: 2rem;
+    position: relative;
+}
+
+.alg-gemeinde-kandi-grid .kandi-wrapper {
+    width: calc(100% / var(--cols) - (var(--cols) - 1) * var(--gutter) / var(--cols));
+}
+
+.alg-gemeinde-kandi-grid .kandi-inner {
+    filter: var(--dropshadow);
+    border-radius: 4px;
+    overflow: hidden;
+    text-align: center;
+    cursor: pointer;
+}
+
+.alg-gemeinde-kandi-grid .kandi-content-wrapper {
+    padding: 1rem 0.25rem;
+}
+
+.alg-gemeinde-kandi-grid .kandi-image-container {
+    overflow: hidden;
+}
+
+.alg-gemeinde-kandi-grid .kandi-image-container img {
+    transition: 0.25s ease-in-out transform;
+    transform-origin: center;
+}
+
+.alg-gemeinde-kandi-grid .kandi-inner:hover .kandi-image-container img {
+    transform: scale(1.05);
+}
+
+
+.alg-gemeinde-kandi-grid .kandi-title {
+    font-family: "Passion One", sans-serif;
+    line-height: 1.1;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+    color: var(--color-primary);
+    margin-bottom: 0.25rem;
+}
+
+.alg-kandi-bisher {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-weight: bold;
+    font-size: 0.75rem;
+    color: white;
+    background-color: var(--color-secondary);
+    padding: 0.3em 0.6em;
+}
+
+/* Kandi details */
+.kandi-details-wrapper, .kandi-details-outer, .kandi-details-placeholder {
+    max-height: 0px;
+    overflow-y: hidden;
+    transition: 0.25s ease-in-out max-height, 0.25s ease-in-out opacity, 0.25s ease-in-out visibility;
+}
+
+.kandi-details-placeholder {
+    width: 100%;
+    position: relative;
+}
+
+.kandi-details-arrow .feather {
+    margin: auto;
+    height: 2rem;
+    width: auto;
+    stroke: var(--color-snow);
+    fill: var(--color-snow);
+    padding-top: 0.25rem;
+    margin-bottom: -0.5rem;
+}
+
+.kandi-details-outer {
+    position: absolute;
+    left: 0;
+    width: 100%;
+}
+
+.kandi-details-inner {
+    padding: 2rem;
+    background-color: var(--color-snow)
+}
+
+.kandi-details-title {
+    font-family: "Passion One", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+}
+
+.kandi-details-content p:nth-child(1):before {
+    content: "«";
+    display: inline;
+}
+
+.kandi-details-content p:last-child::after {
+    content: "»";
+    display: inline;
+}
+
+.kandi-details-somelink {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-primary);
+}
+
+.kandi-details-somelink .feather {
+    height: 1.25rem;
+    width: 1.25rem;
+    stroke: white;
+}

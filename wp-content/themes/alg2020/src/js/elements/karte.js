@@ -11,7 +11,7 @@ if (document.querySelector(".alg-map-inner")) {
       animation: "perspective",
     });
     wahlkreis.addEventListener("click", () => {
-      window.location.href = `/wahlkreis/${wahlkreis.id}`;
+      window.location.href = `/gemeinde/${wahlkreis.id}`;
     });
   });
 }

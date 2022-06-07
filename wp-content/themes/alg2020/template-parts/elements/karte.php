@@ -4,7 +4,7 @@
         <div class="alg-map-container">
             <div class="alg-map">
                 <?=
-                file_get_contents(__DIR__ . "/img/wahlkreise-zug.svg");
+                file_get_contents(__DIR__ . "/../img/wahlkreise-zug.svg");
                 ?>
             </div>
         </div>

@@ -9,11 +9,15 @@ body {
 }
 
 h1,h2 {
-    font-family: 'Passion One', cursive;
+    font-family: 'Passion One', sans-serif;
     text-transform: uppercase;
     letter-spacing: 0.025em;
 }
 
 h3,h4,h5,h6 {
     font-weight: bold;
+}
+
+p + p {
+    margin-top: 0.6rem;
 }

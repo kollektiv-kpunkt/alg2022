@@ -1,3 +1,4 @@
+</main>
 </div>
 
 <footer class="mt-28">

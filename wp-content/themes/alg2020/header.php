@@ -8,7 +8,7 @@
     wp_head();
     ?>
 </head>
-<body>
+<body data-barba="wrapper">
     <?php
     if (!isset($_COOKIE["alg-catcher-closed"])) {
         get_template_part( "template-parts/catcher/index");
@@ -16,3 +16,4 @@
     get_template_part( "template-parts/navbar/index");
     ?>
     <div id="main-content">
+        <main data-barba="container" data-barba-namespace="home">

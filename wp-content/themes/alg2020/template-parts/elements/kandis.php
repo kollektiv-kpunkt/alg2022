@@ -16,7 +16,7 @@ $query = new WP_Query( $args );
             while ( $query->have_posts() ) :
                 $query->the_post();
                 $gremium = get_the_terms( $post->ID, 'gremium' );
-                $wahlkreis = get_the_terms( $post->ID, 'wahlkreis' );
+                $wahlkreis = get_the_terms( $post->ID, 'gemeinde' );
                 ?>
 
                 <div class="kandi-wrapper">
