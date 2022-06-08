@@ -25,3 +25,10 @@
 .alg-2col > div {
     width: calc(50% - 2rem);
 }
+
+/* Mobile Styles */
+@media screen and (max-width: 1080px) {
+    .alg-2col > div {
+        width: 100%;
+    }
+}

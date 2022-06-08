@@ -1,13 +1,18 @@
 .alg-navbar-wrapper {
-    background-color: white;
     position: sticky;
     top: 0;
     left: 0;
     width: 100%;
+    max-height: 100vh;
+    overflow-y: hidden;
     z-index: 100;
     transform: translateY(0);
     opacity: 1;
     transition: 0.25s ease-in-out transform, 0.25s ease-in-out opacity;
+}
+
+.alg-navbar-inner {
+    background-color: white;
 }
 
 .alg-navbar-wrapper.alg-navbar-hide {
@@ -44,4 +49,105 @@
 .alg-menu-main .alg-menu-item.alg-menu-item-current {
     color: var(--color-secondary);
     border-bottom: 2px solid var(--color-secondary);
+}
+
+/* Mobile Styles */
+.alg-menu-mobile {
+    display: none;
+}
+
+@media (max-width: 1080px) {
+    .alg-navbar svg.alg-logo {
+       height: 2rem;
+   }
+
+   .alg-navbar .alg-button-high {
+        padding-top: 1em;
+        padding-bottom: 1em;
+   }
+
+   .alg-menu-main.gap-10 {
+       gap: 1rem;
+   }
+}
+
+@media (max-width: 900px) {
+    .alg-menu-cta .alg-button:first-child {
+       display: none;
+   }
+}
+
+@media (max-width: 780px) {
+    .alg-menu-main, .alg-menu-cta {
+        display: none;
+    }
+
+    .alg-menu-mobile {
+       display: inherit;
+    }
+
+    .alg-navbar svg.alg-logo {
+        height: 3rem;
+    }
+}
+
+button.alg-menu-mobile-tofuburger, button.alg-menu-mobile-tofuburger:before, button.alg-menu-mobile-tofuburger:after {
+    content: "";
+    display: block;
+    width: 27px;
+    height: 2px;
+    background-color: var(--color-secondary);
+    cursor: pointer;
+}
+
+button.alg-menu-mobile-tofuburger::before {
+    transform: translateY(-6px);
+}
+
+button.alg-menu-mobile-tofuburger::after {
+    transform: translateY(4px);
+}
+
+.alg-mobilemenu-item {
+    font-weight: bold;
+    font-size: 1.25rem;
+    color: var(--color-dark);
+    border-bottom: 1px solid var(--color-dark);
+    width: fit-content;
+}
+
+.alg-mobilemenu-item-current {
+    color: var(--color-secondary);
+    border-bottom: 1px solid var(--color-secondary);
+}
+
+/* Mobile Menu logic */
+.alg-mobilemenu-wrapper {
+    max-height: 0;
+    overflow-y: hidden;
+    transition: 0.5s ease-in-out max-height;
+}
+
+// .alg-navbar-wrapper.alg-mobilemenu-open {
+//     position: fixed;
+// }
+
+.alg-navbar-wrapper.alg-mobilemenu-open .alg-mobilemenu-wrapper {
+    max-height: 100vh;
+}
+
+button.alg-menu-mobile-tofuburger, button.alg-menu-mobile-tofuburger::before, button.alg-menu-mobile-tofuburger::after {
+    transition: 0.25s ease-in-out transform, 0.25s ease-in-out background-color, 0.25s ease-in-out visibility;
+}
+
+.alg-navbar-wrapper.alg-mobilemenu-open button.alg-menu-mobile-tofuburger::before {
+    transform: translateY(0) rotate(45deg);
+}
+
+.alg-navbar-wrapper.alg-mobilemenu-open button.alg-menu-mobile-tofuburger::after {
+    transform: translateY(-2px) rotate(-45deg);
+}
+
+.alg-navbar-wrapper.alg-mobilemenu-open button.alg-menu-mobile-tofuburger {
+    background-color: transparent;
 }

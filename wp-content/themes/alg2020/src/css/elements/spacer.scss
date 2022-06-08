@@ -31,3 +31,33 @@
 .alg-rr-subtitel {
     font-size: 2.5rem;
 }
+
+/* Mobile Styles */
+
+@media (max-width: 1350px) {
+    .alg-rr-subtitel {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 1080px) {
+    .alg-rr-img-wrapper {
+        max-width: 666px;
+        margin: auto;
+    }
+
+    .alg-content.py-24 {
+        padding-top: 0;
+        padding-bottom: 3rem;
+    }
+
+    .alg-rr-outer {
+        background-image: linear-gradient(to bottom, white 3.5rem, var(--color-secondary) 3.5rem, var(--color-secondary) calc(100% - 3.5rem));
+    }
+}
+
+@media (max-width: 360px) {
+   .alg-rr-titel {
+       font-size: 3.5rem;
+   }
+}

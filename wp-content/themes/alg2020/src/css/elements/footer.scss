@@ -19,3 +19,19 @@ footer .alg-bottom-bar {
     background-color: var(--color-secondary);
     height: 1rem
 }
+
+/* Mobile Styles */
+
+@media (max-width: 780px) {
+   footer .wp-block-columns p.has-text-align-center {
+       text-align: start;
+   }
+
+   footer .wp-block-social-links, footer .alg-footer-inner.justify-end {
+       justify-content: flex-start;
+   }
+
+   .alg-footer-widget:nth-child(2) .wp-block-columns {
+        gap: 0.5rem;
+   }
+}

@@ -22,7 +22,7 @@
     font-size: 1.25rem;
 }
 
-.alg-thema-slide-image-wrapper {
+.alg-thema-slide-image-outer {
     position: relative;
     overflow: hidden;
     filter: var(--dropshadow);
@@ -68,4 +68,36 @@
 
 .alg-thema-page.alg-thema-page-active {
     background-color: var(--color-secondary);
+}
+
+/* Mobile Styles */
+
+@media (max-width: 1080px) {
+    .alg-thema-slide-image-outer {
+       max-width: 666px;
+       margin: auto;
+    }
+
+    .alg-thema-slide-content.py-8{
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .alg-thema-slide-wrapper {
+        gap: 3rem;
+    }
+
+    .alg-thema-pagination {
+        margin-top: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .alg-thema-titles {
+        bottom: 5.83vw;
+    }
+
+    .alg-title-inner {
+       font-size: 7.2vw;
+    }
 }

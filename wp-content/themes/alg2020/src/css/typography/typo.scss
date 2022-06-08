@@ -1,7 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Passion+One:wght@700&display=swap');
 
 html {
-    font-size: 18px
+    font-size: clamp(15px, 1vw, 18px)
+}
+
+@media screen and (max-width: 680px) {
+    html {
+        font-size: 14px
+    }
+}
+
+@media screen and (max-width: 360px) {
+    html {
+        font-size: 13px
+    }
 }
 
 body {

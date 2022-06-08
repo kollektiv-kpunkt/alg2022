@@ -2,7 +2,7 @@
 $menuitems = alg_menu_items("alg-footer-nav");
 ?>
 <div class="alg-footer-menu">
-    <div class="alg-footer-inner flex gap-6 justify-end">
+    <div class="alg-footer-inner flex gap-y-3 gap-x-6 justify-end flex-wrap">
         <?php foreach ($menuitems as $item) : ?>
             <a href="<?php echo $item->url; ?>" class="text-white text-sm underline"><?php echo $item->title; ?></a>
         <?php endforeach; ?>

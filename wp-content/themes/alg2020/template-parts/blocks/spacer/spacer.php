@@ -11,7 +11,7 @@
             <div class="alg-content my-auto text-white py-24">
                 <h2 class="alg-section-subtitle alg-section-subtitle-neg">In den Regierungsrat</h2>
                 <h1 class="alg-rr-titel"><?= get_field("titel") ?></h1>
-                <h3 class="alg-rr-subtitel mb-10"><?= get_field("untertitel") ?></h3>
+                <h3 class="alg-rr-subtitel mb-8"><?= get_field("untertitel") ?></h3>
                 <a href="<?= the_field("button_link") ?>" class="alg-button alg-button-neg alg-more-button"><?= the_field("button_text") ?></a>
             </div>
         </div>

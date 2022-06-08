@@ -34,38 +34,40 @@ $query = new WP_Query( $args );
                     <div class="alg-thema-slide-excerpt mb-8">
                         <?php the_excerpt(); ?>
                     </div>
-                    <a href="<?= $_ENV["PPOSITIONEN"] . "#" . $link ?>" class="alg-button alg-more-button">Mehr lesen</a>
+                    <a href="<?= the_permalink() ?>" class="alg-button alg-more-button">Mehr lesen</a>
                 </div>
                 <div class="alg-thema-slide-image-wrapper my-auto">
-                    <div class="alg-thema-slide-image-container">
-                        <?php the_post_thumbnail('medium_large'); ?>
-                    </div>
-                    <div class="alg-thema-titles">
-                        <div class="alg-titles-rotator">
-                            <div class="alg-titles-wrapper flex flex-col gap-2">
-                                <?php
-                                $titles = get_field("slogans");
-                                $titlesCount = count($titles);
-                                $j = 1;
-                                foreach ($titles as $title) :
-                                    ?>
+                    <div class="alg-thema-slide-image-outer">
+                        <div class="alg-thema-slide-image-container">
+                            <?php the_post_thumbnail('medium_large'); ?>
+                        </div>
+                        <div class="alg-thema-titles">
+                            <div class="alg-titles-rotator">
+                                <div class="alg-titles-wrapper flex flex-col gap-2">
                                     <?php
-                                    $classes = "alg-title-wrapper w-fit";
-                                    if ($j == $titlesCount) {
-                                        $classes .= " alg-title-last";
-                                    }
-                                    ?>
-                                    <div class="<?= $classes ?>">
-                                        <div class="alg-title-inner">
-                                            <div class="alg-title-text font-bold leading-none">
-                                                <?= $title["slogan"] ?>
+                                    $titles = get_field("slogans");
+                                    $titlesCount = count($titles);
+                                    $j = 1;
+                                    foreach ($titles as $title) :
+                                        ?>
+                                        <?php
+                                        $classes = "alg-title-wrapper w-fit";
+                                        if ($j == $titlesCount) {
+                                            $classes .= " alg-title-last";
+                                        }
+                                        ?>
+                                        <div class="<?= $classes ?>">
+                                            <div class="alg-title-inner">
+                                                <div class="alg-title-text font-bold leading-none">
+                                                    <?= $title["slogan"] ?>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                <?php
-                                $j++;
-                                endforeach;
-                                ?>
+                                    <?php
+                                    $j++;
+                                    endforeach;
+                                    ?>
+                                </div>
                             </div>
                         </div>
                     </div>

@@ -38,3 +38,11 @@
     background-color: var(--color-secondary);
     color: white;
 }
+
+/* Mobile Styles */
+
+@media screen and (max-width: 480px) {
+    #alg-heroine-inner .alg-title-wrapper {
+        font-size: 10vw;
+    }
+}

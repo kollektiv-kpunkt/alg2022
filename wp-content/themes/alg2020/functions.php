@@ -44,6 +44,13 @@ function alg_menu_items( $location, $args = [] ) {
     return $menu_items;
 }
 
+add_filter( 'wp_get_nav_menu_items', 'prefix_nav_menu_classes', 10, 3 );
+
+function prefix_nav_menu_classes($items, $menu, $args) {
+    _wp_menu_item_classes_by_context($items);
+    return $items;
+}
+
 function alg_htaccess( $rules ) {
     $content = <<<EOD
     \n
