@@ -23,9 +23,7 @@
         ],
         "body": [
             "@media (max-width: 1080px) {",
-            "   ${1:selector} {",
-            "       ${2:style}",
-            "   }",
+            "    ${2:style}",
             "}",
         ],
         "description": "Add mobile styles large."
@@ -36,9 +34,7 @@
         ],
         "body": [
             "@media (max-width: 980px) {",
-            "   ${1:selector} {",
-            "       ${2:style}",
-            "   }",
+            "    ${2:style}",
             "}",
         ],
         "description": "Add mobile styles medium."
@@ -49,9 +45,7 @@
         ],
         "body": [
             "@media (max-width: 780px) {",
-            "   ${1:selector} {",
-            "       ${2:style}",
-            "   }",
+            "    ${2:style}",
             "}",
         ],
         "description": "Add mobile styles small."
@@ -62,9 +56,7 @@
         ],
         "body": [
             "@media (max-width: 480px) {",
-            "   ${1:selector} {",
-            "       ${2:style}",
-            "   }",
+            "    ${2:style}",
             "}",
         ],
         "description": "Add mobile styles x-small."
@@ -75,9 +67,7 @@
         ],
         "body": [
             "@media (max-width: 360px) {",
-            "   ${1:selector} {",
-            "       ${2:style}",
-            "   }",
+            "    ${2:style}",
             "}",
         ],
         "description": "Add mobile styles tiny."
@@ -88,9 +78,7 @@
         ],
         "body": [
             "@media (max-width: ${1:width}px) {",
-            "   ${2:selector} {",
-            "       ${3:style}",
-            "   }",
+            "    ${3:style}",
             "}",
         ],
         "description": "Add mobile styles special."

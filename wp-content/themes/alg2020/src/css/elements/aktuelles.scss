@@ -1,0 +1,110 @@
+.alg-post-wrapper {
+    display: flex;
+    --text-content-width: 100%;
+    border-radius: 4px;
+    overflow: hidden;
+    filter: var(--dropshadow);
+
+    &.alg-post-wrapper-has-thumbnail {
+        --text-content-width: 80%;
+
+        @media (max-width: 1225px) {
+            --text-content-width: 75%;
+        }
+
+        @media (max-width: 1080px) {
+            --text-content-width: 66%;
+        }
+
+        @media (max-width: 1000px) {
+            --text-content-width: 100%;
+        }
+    }
+
+    @media (max-width: 1000px) {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    + .alg-post-wrapper {
+        margin-top: 3rem;
+    }
+
+    .alg-post-inner {
+        padding: 1.5rem;
+        background-color: #fafafa;
+        width: var(--text-content-width);
+        display: flex;
+    }
+
+    .alg-post-content {
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    .alg-post-thumbnail {
+        width: calc(100% - var(--text-content-width));
+
+        @media (max-width: 1000px) {
+            width: 100%;
+        }
+
+        .alg-post-thumbnail-inner {
+            position: relative;
+            padding-bottom: 100%;
+
+            @media (max-width: 1000px) {
+                padding-bottom: calc(100% / 16 * 4.5);
+            }
+
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+    }
+}
+
+// Pagination
+
+.alg-pagination {
+    margin-left: auto;
+    margin-right: 0;
+    display: flex;
+    column-gap: 0.25rem;
+
+    .page-numbers {
+        width: 2.5rem;
+        height: 2.5rem;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        background-color: var(--color-primary);
+        color: white;
+        border-radius: 2px;
+        border: 2px solid #0d3b0d;
+
+        &.current {
+            background-color: transparent;
+            color: var(--color-primary);
+        }
+
+        &.dots {
+            background-color: transparent;
+            color: var(--color-primary);
+            border: none;
+        }
+
+        &.prev, &.next {
+            background-color: var(--color-secondary);
+            border-color: #55042f;
+        }
+    }
+}

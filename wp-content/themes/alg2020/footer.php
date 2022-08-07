@@ -1,6 +1,12 @@
 </main>
 </div>
 
+<div class="mitmachen-wrapper mt-28"<?= (is_front_page()) ? " id='mitmachen'" : "" ?>>
+    <?php
+    get_template_part( "template-parts/mitmachen/index");
+    ?>
+</div>
+
 <footer class="mt-28">
     <?php
     get_template_part( "template-parts/footer/index");

@@ -4,7 +4,6 @@
     left: 0;
     width: 100%;
     max-height: 100vh;
-    overflow-y: hidden;
     z-index: 100;
     transform: translateY(0);
     opacity: 1;
@@ -32,21 +31,56 @@
 
 // Main Menu Items
 
-.alg-menu-main .alg-menu-item {
+.menu-main-container {
+    display: flex;
+}
+
+.alg-menu-main .menu-item {
     display: inline-block;
     font-weight: bold;
     border-bottom: 2px solid transparent;
     transition: 0.125s ease-in-out border-bottom, 0.125s ease-in-out color;
+    text-decoration: none;
+    position: relative;
+    z-index: 900000;
+
+    a {
+        text-decoration: none;
+    }
+
+    .sub-menu {
+        opacity: 0;
+        position: absolute;
+        visibility: hidden;
+        margin: 0;
+        padding-top: 0.75rem;
+        z-index: 900000;
+
+        .menu-item {
+            color: white;
+            padding: 0.5rem;
+            background-color: var(--color-primary);
+
+            a {
+                line-height: 0.8;
+            }
+        }
+    }
 }
 
-.alg-menu-main .alg-menu-item:hover {
+.alg-menu-main .menu-item:hover {
     display: inline-block;
     font-weight: bold;
     border-bottom: 2px solid var(--color-primary);
     color: var(--color-primary);
 }
 
-.alg-menu-main .alg-menu-item.alg-menu-item-current {
+#primary-menu li:hover>.sub-menu {
+    visibility: visible;
+    opacity: 1;
+}
+
+.alg-menu-main .menu-item.current-menu-item {
     color: var(--color-secondary);
     border-bottom: 2px solid var(--color-secondary);
 }
@@ -114,6 +148,7 @@ button.alg-menu-mobile-tofuburger::after {
     color: var(--color-dark);
     border-bottom: 1px solid var(--color-dark);
     width: fit-content;
+    text-decoration: none !important;
 }
 
 .alg-mobilemenu-item-current {

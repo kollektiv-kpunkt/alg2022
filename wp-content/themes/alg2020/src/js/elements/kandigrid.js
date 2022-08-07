@@ -2,6 +2,7 @@ function toggleKandiOn(id) {
   var kandiWrapper = document.querySelector(
     `.kandi-wrapper[data-kandi='${id}']`
   );
+  kandiWrapper.parentElement.classList.add("kandi-open");
   history.pushState({}, null, "/kandi/" + kandiWrapper.id);
   kandiWrapper.classList.add("kandi-active");
   var kandiDetails = kandiWrapper.querySelector(".kandi-details-wrapper");
@@ -35,6 +36,7 @@ function toggleKandiOff(id) {
   var kandiWrapper = document.querySelector(
     `.kandi-wrapper[data-kandi='${id}']`
   );
+  kandiWrapper.parentElement.classList.remove("kandi-open");
   kandiWrapper.classList.remove("kandi-active");
   var kandiDetails = kandiWrapper.querySelector(".kandi-details-wrapper");
   var detailsOuter = kandiDetails.querySelector(".kandi-details-outer");

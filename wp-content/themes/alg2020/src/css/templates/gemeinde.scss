@@ -25,10 +25,34 @@
     --gutter: 2.5rem;
     margin-top: 2rem;
     position: relative;
+
+    @media (max-width: 980px) {
+        --cols: 3;
+    }
+
+    @media (max-width: 780px) {
+        --cols: 2;
+    }
+
+    @media (max-width: 360px) {
+        --cols: 1;
+    }
+
+    &.kandi-open .kandi-wrapper {
+        opacity: 0.4;
+        filter: blur(2px) grayscale(100%);
+        transition: opacity 0.5s ease-in-out filter 0.5s ease-in-out;
+    }
 }
 
 .alg-gemeinde-kandi-grid .kandi-wrapper {
     width: calc(100% / var(--cols) - (var(--cols) - 1) * var(--gutter) / var(--cols));
+
+    &.kandi-active {
+        z-index: 10;
+        opacity: 1 !important;
+        filter: unset;
+    }
 }
 
 .alg-gemeinde-kandi-grid .kandi-inner {
@@ -103,6 +127,7 @@
     position: absolute;
     left: 0;
     width: 100%;
+    z-index: 90000;
 }
 
 .kandi-details-inner {
@@ -140,4 +165,20 @@
     height: 1.25rem;
     width: 1.25rem;
     stroke: white;
+}
+
+// Kandi elements
+.alg-kandi-praesidium-wrapper {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 90000;
+    background-color: var(--color-secondary);
+}
+
+.alg-kandi-praesidium-inner {
+    @media (max-width: 780px) {
+        font-size: 1rem;
+    }
 }

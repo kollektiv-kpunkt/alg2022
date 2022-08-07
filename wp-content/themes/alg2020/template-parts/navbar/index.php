@@ -7,20 +7,13 @@
                     file_get_contents(__DIR__ . "/../img/logo.svg");
                     ?>
                 </a>
-                <div class="alg-menu-main flex gap-10 my-auto">
-                    <?php
-                    $menuitems = alg_menu_items("alg-main-nav");
-                    foreach ($menuitems as $item) {
-                        $title = $item->title;
-                        $url = $item->url;
-                        $classes = "alg-menu-item px-2";
-                        if ($item->current) {
-                            $classes .= " alg-menu-item-current";
-                        }
-                        echo "<a href='$url' class='$classes'>$title</a>";
-                    }
-                    ?>
-                </div>
+                <?php
+                wp_nav_menu( array(
+                        'theme_location' => 'alg-main-nav',
+                        'menu_id'        => 'primary-menu',
+                        'menu_class'     => 'alg-menu-main flex gap-10 my-auto',
+                    ) );
+                ?>
                 <div class="alg-menu-cta flex gap-4 my-auto">
                     <?php
                     $calls = alg_menu_items("alg-main-cta");

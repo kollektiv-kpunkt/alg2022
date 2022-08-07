@@ -6,7 +6,7 @@ $dotenv->safeLoad();
 
 /* alg2020 */
 function alg_scripts() {
-    // wp_enqueue_style( 'fa', get_template_directory_uri() . "/lib/font-awesome/css/font-awesome.min.css", [], "1.0.0" );
+    wp_enqueue_style( 'fa', get_template_directory_uri() . "/lib/font-awesome/css/font-awesome.min.css", [], "1.0.0" );
     // wp_enqueue_style( 'glowCookies', get_template_directory_uri() . "/lib/glowCookies/glowCookies.css", [], "1.0.0" );
     // wp_enqueue_style( 'fonts', get_template_directory_uri() . '/dist/fonts/fonts.css', [], "1.0.0" );
     // wp_enqueue_script( 'glowCookies', get_template_directory_uri() . "/lib/glowCookies/glowCookies.js", array(), "1.0.0", true );
@@ -19,6 +19,9 @@ add_action( 'wp_enqueue_scripts', 'alg_scripts' );
 function alg_theme_support() {
     add_theme_support( 'title-tag' );
     add_theme_support( 'post-thumbnails' );
+    add_editor_style('dist/theme.css' );
+    add_editor_style('dist/style.css' );
+    add_editor_style('gutenberg/gutFixes.css' );
 }
 add_action( 'after_setup_theme', 'alg_theme_support' );
 
@@ -162,6 +165,16 @@ function alg_blocktypes() {
             'category'          => 'alg2020',
             'icon'              => '',
             'keywords'          => array( 'spacer', 'rr', 'regierungsrat' ),
+        ));
+
+        acf_register_block_type(array(
+            'name'              => 'toggle',
+            'title'             => __('Toggle'),
+            'description'       => __('Toggle zum anzeigen/verstecken von Details.'),
+            'render_template'   => 'template-parts/blocks/toggle/toggle.php',
+            'category'          => 'alg2020',
+            'icon'              => '',
+            'keywords'          => array( 'toggle', 'details' ),
         ));
     }
 }

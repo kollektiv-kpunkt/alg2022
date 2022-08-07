@@ -1,0 +1,117 @@
+.alg-form-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+
+    column-gap: var(--gutter);
+    row-gap: var(--rowgutter);
+
+    --cols: 2;
+    --gutter: 2rem;
+    --rowgutter: 1rem;
+    --formcolor: var(--color-primary);
+
+    @media (max-width: 780px) {
+        flex-direction: column;
+
+        .alg-form-group {
+            width: 100%;
+        }
+    }
+
+    &.alg-form-white {
+        --formcolor: white;
+    }
+
+    .alg-button {
+        margin-top: var(--rowgutter);
+        --btn-border: var(--formcolor);
+        --btn-color: var(--formcolor);
+    }
+}
+
+.alg-form-group {
+    width: calc(100% / var(--cols) - (var(--cols) - 1) * var(--gutter) / var(--cols));
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.25rem;
+
+    &.alg-form-group-fullwidth {
+        width: 100%;
+    }
+
+    &.alg-form-group-checkbox {
+        flex-direction: row;
+
+        label {
+            font-size: 0.8rem;
+            font-weight: 400
+        }
+    }
+}
+
+.alg-form-group label {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.alg-form-input {
+    border: none;
+    background-color: transparent;
+    border-bottom: 2px solid var(--formcolor);
+    padding: 0.1em 0;
+    outline: none;
+}
+
+.alg-form-group-checkbox label {
+    cursor: pointer;
+}
+
+
+.alg-form-group-checkbox input[type="checkbox"] {
+    display: none;
+}
+
+.alg-form-group-checkbox input[type="checkbox"]+label:before {
+    font-family: FontAwesome;
+    display: inline-block;
+    content: "\f0c8";
+    letter-spacing: 10px;
+    cursor: pointer;
+}
+
+.alg-form-group-checkbox input[type="checkbox"]:checked+label:before {
+    content: "\f14a";
+}
+
+/* cf7 */
+
+.wpcf7 {
+    max-width: 793px;
+    margin-top: 1.25rem;
+
+    p+p {
+        margin-top: 1.25rem;
+    }
+
+    label {
+        font-size: 1.25rem;
+        font-weight: bold;
+
+        .wpcf7-list-item-label {
+            font-size: 1rem;
+            font-weight: normal;
+        }
+    }
+
+    textarea, input[type=text], input[type=email] {
+        width: 100%;
+        border: 1px solid var(--color-secondary);
+        border-bottom: 3px solid var(--color-secondary);
+        margin-top: 1rem;
+    }
+
+    input[type=submit] {
+        margin-top: 1.25rem;
+    }
+}

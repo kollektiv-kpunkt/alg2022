@@ -1,7 +1,8 @@
 <?php
 $args = array(
 	'post_type'              => array( 'kandi' ),
-	'nopaging'               => true,
+	'nopaging'               => false,
+    'posts_per_page'        => 14,
 	'orderby'                => 'rand',
 );
 $query = new WP_Query( $args );
@@ -10,7 +11,7 @@ $query = new WP_Query( $args );
 <div class="kandis-section-wrapper py-10 my-20">
     <div class="kandis-section-inner md-container">
         <h2 class="alg-section-subtitle">Die Kandidierenden</h2>
-        <h1 class="alg-section-title alg-section-title-primary"><span id="alg-kandis-number"></span> aus 85 für Zug</h1>
+        <h1 class="alg-section-title alg-section-title-primary"><span id="alg-kandis-number"></span> aus 85 für den Kanton Zug</h1>
         <div class="kandi-grid-section flex gap-y-6 flex-wrap">
             <?php
             $i = 1;
@@ -44,9 +45,9 @@ $query = new WP_Query( $args );
                         ?>
                     </div>
                     <div class="kandi-content-wrapper">
-                        <h3 class="kandi-title"><?php the_title(); ?></h3>
+                        <h3 class="kandi-title text-base"><?php the_title(); ?></h3>
                         <p class="text-xs">
-                            <?= $gremium[0]->name; ?><br>
+                            <?= ($wahlkreis[0]->name == "Zug") ? "Grosser Gemeinderat" : $gremium[0]->name; ?><br>
                             <?= $wahlkreis[0]->name; ?>
                         </p>
                     </div>

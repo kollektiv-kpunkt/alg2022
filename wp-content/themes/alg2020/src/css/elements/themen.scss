@@ -47,6 +47,14 @@
 
 .alg-thema-titles .alg-title-wrapper {
     font-size: 2.5rem;
+
+    @media (max-width: 704px) {
+        font-size: 5.32670vw;
+    }
+
+    @media (max-width: 480px) {
+        font-size: 6vw;
+    }
 }
 
 .alg-thema-titles {
@@ -95,9 +103,5 @@
 @media (max-width: 480px) {
     .alg-thema-titles {
         bottom: 5.83vw;
-    }
-
-    .alg-title-inner {
-       font-size: 7.2vw;
     }
 }

@@ -1,4 +1,8 @@
 <?php
+$image = ["praesidium"];
+$contant = [];
+$deets = [];
+
 while ($args["kandis"]->have_posts()) :
     $args["kandis"]->the_post();
     $details = [get_field("berufsbezeichnung")];
@@ -9,7 +13,7 @@ while ($args["kandis"]->have_posts()) :
         $details[] = "Listenplatz " . get_field("listenplatz");
     }
     if (get_field("byline")) {
-        $details[] = get_field("byline");
+        $details = array_merge($details, explode(" | ", get_field("byline")));
     }
 ?>
 <div class="kandi-wrapper" data-kandi="kandi-<?= the_ID() ?>" id="<?= $post->post_name ?>">
@@ -21,6 +25,9 @@ while ($args["kandis"]->have_posts()) :
                 <div class="alg-kandi-bisher leading-none">Bisher</div>
             <?php
             endif;
+            if (in_array(get_field("elem"), $image)) {
+                get_template_part( "template-parts/kandigrid/" . get_field("elem"));
+            }
             ?>
         </div>
         <div class="kandi-content-wrapper">
@@ -39,7 +46,7 @@ while ($args["kandis"]->have_posts()) :
         <div class="kandi-details-outer">
             <div class="kandi-details-inner" data-kandi="kandi-<?= the_ID() ?>">
                 <h4 class="text-6xl mb-1 text-sec kandi-details-title"><?= the_title() ?></h4>
-                <p><b><?= implode(", ", $details); ?></b></p>
+                <p><b><?= implode(" | ", $details); ?></b></p>
                 <div class="text-2xl italic kandi-details-content leading-normal mt-4"><?= the_content() ?></div>
                 <div class="mt-6 kandi-details-somelinks flex gap-2">
                     <?php

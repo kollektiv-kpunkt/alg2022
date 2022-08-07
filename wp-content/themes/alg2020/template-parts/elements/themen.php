@@ -11,7 +11,7 @@ $query = new WP_Query( $args );
 
 <div class="themen-section-wrapper my-20">
     <div class="themen-section-inner md-container">
-    <h1 class="alg-section-title alg-section-title-secondary">Unsere Version für Zug</h1>
+    <h1 class="alg-section-title alg-section-title-secondary">Unsere Vision für Zug</h1>
     <div class="alg-themen-slider-outer">
         <?php
         $i = 0;
@@ -34,7 +34,7 @@ $query = new WP_Query( $args );
                     <div class="alg-thema-slide-excerpt mb-8">
                         <?php the_excerpt(); ?>
                     </div>
-                    <a href="<?= the_permalink() ?>" class="alg-button alg-more-button">Mehr lesen</a>
+                    <a href="<?= $_ENV["PPOSITIONEN"] . "#" . explode("/", get_the_permalink())[4] ?>" class="alg-button alg-more-button">Mehr lesen</a>
                 </div>
                 <div class="alg-thema-slide-image-wrapper my-auto">
                     <div class="alg-thema-slide-image-outer">

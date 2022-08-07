@@ -5,4 +5,5 @@ import "./elements/navbar.js";
 import "./elements/themen.js";
 import "./elements/karte.js";
 import "./elements/kandigrid.js";
+import "./elements/forms.js";
 import "./elements/cookies.js";
