@@ -1,3 +1,5 @@
+<script src="https://www.google.com/recaptcha/api.js?render=6LdLtVohAAAAAMXB_7_q1C5JZbqSQAdzxPM7Q50-"></script>
+
 <div class="alg-mitmachen-outer">
     <div class="alg-mitmachen-inner alg-2col md-container">
         <div class="alg-mitmachen-content text-white my-auto">
@@ -24,6 +26,7 @@
                     <button type="submit" class="alg-button">Unterstützen</button>
                 </div>
             </form>
+            <div class="alg-form-alert p-3 bg-sec text-white rounded mt-4 leading-none font-bold" hidden></div>
         </div>
         <div class="alg-mitmachen-image-wrapper my-auto">
             <div class="alg-mitmachen-image-inner">

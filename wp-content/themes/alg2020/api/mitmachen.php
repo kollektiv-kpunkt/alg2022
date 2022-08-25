@@ -1,12 +1,40 @@
 <?php
 $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://" . $_SERVER["HTTP_HOST"];
 
+
 if($json = json_decode(file_get_contents("php://input"), true)) {
     $data = $json;
 } else {
     $data = $_POST;
 }
 global $mail;
+
+if (isset($data["token"])) {
+    define("RECAPTCHA_V3_SECRET_KEY", '6LdLtVohAAAAAKsAkeilGyfDJi38JP0HUE2L_q6Z');
+    $token = $data['token'];
+    $action = $data['action'];
+
+    // call curl to POST request
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL,"https://www.google.com/recaptcha/api/siteverify");
+    curl_setopt($ch, CURLOPT_POST, 1);
+    curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query(array('secret' => RECAPTCHA_V3_SECRET_KEY, 'response' => $token)));
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    $response = curl_exec($ch);
+    curl_close($ch);
+    $arrResponse = json_decode($response, true);
+
+    // verify the response
+    if($arrResponse["success"] == '1' && $arrResponse["action"] == $action && $arrResponse["score"] >= 0.5) {
+        $gRecaptcha = true;
+    }
+
+    if (!$gRecaptcha) {
+        echo json_encode(array("status" => "error", "message" => "Captcha failed"));
+        exit;
+    }
+}
+
 
 $optin = $data["optin"] ? "<li>Opt-In: Ja</li>" : "<li>Opt-In: Nein</li>";
 
@@ -42,8 +70,8 @@ if (!$mail->send()){
 
 $return = [
     "status" => "success",
-    "message" => "Mail sent successfully",
-    "code" => "s-1-41"
+    "message" => "Danke für deine Unterstützung!",
+    "code" => "s-1-41",
 ];
 echo json_encode($return);
 ?>

@@ -1,15 +1,19 @@
 <?php
 $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 // WP_Query arguments
-$args = array(
+$query_args = array(
 	'post_type'              => array( 'post' ),
 	'post_status'            => array( 'publish' ),
     'posts_per_page' => 10,
     'paged' => $paged
 );
 
+if (isset($args["category"])) {
+    $query_args["cat"] = $args["category"];
+}
+
 // The Query
-$query = new WP_Query( $args );
+$query = new WP_Query( $query_args );
 
 // The Loop
 if ( $query->have_posts() ) :
@@ -33,6 +37,7 @@ if ( $query->have_posts() ) :
             <div class="alg-post-inner">
                 <div class="alg-post-content">
                     <h3 class="text-lg"><?= the_title() ?></h3>
+                    <p class="text-sm text-gray-600 mb-2"><?= the_date( "d.m.Y") ?> | <?= the_category( ", " ) ?></p>
                     <?= the_excerpt() ?>
                     <a href="<?= the_permalink() ?>" class="alg-button alg-more-button text-base mt-4">Weiterlesen</a>
                 </div>

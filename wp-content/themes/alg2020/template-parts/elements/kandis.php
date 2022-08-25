@@ -4,6 +4,13 @@ $args = array(
 	'nopaging'               => false,
     'posts_per_page'        => 14,
 	'orderby'                => 'rand',
+    "meta_query"             => array(
+        array(
+            "key"       => "show_on_fp",
+            "value"     => '"show_fp"',
+            "compare"   => "LIKE"
+        )
+    )
 );
 $query = new WP_Query( $args );
 ?>

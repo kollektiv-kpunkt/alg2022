@@ -7,6 +7,12 @@
     ?>
 </div>
 
+<div class="nationalrat-wrapper mt-28">
+    <?php
+    get_template_part( "template-parts/nationalrat/index");
+    ?>
+</div>
+
 <footer class="mt-28">
     <?php
     get_template_part( "template-parts/footer/index");
