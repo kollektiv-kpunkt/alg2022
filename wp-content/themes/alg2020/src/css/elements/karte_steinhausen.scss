@@ -1,0 +1,23 @@
+.alg-kartesteinhausen-img-wrapper {
+    padding-bottom: calc(100% / 4 * 3);
+    position: relative;
+
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    @media (max-width: 980px) {
+        padding-bottom: calc(100% / 1 * 1);
+    }
+}
+
+.alg-kartesteinhausen-content-wrapper {
+    li + li {
+        margin-top: 0.5rem;
+    }
+}

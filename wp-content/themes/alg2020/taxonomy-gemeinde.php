@@ -142,5 +142,9 @@ $gemeinde = get_queried_object();
 </div>
 
 <?php
+$elements = explode(",", get_field("add_elements", $gemeinde));
+foreach($elements as $element) :
+    get_template_part( "template-parts/elements/" . $element, "", array( "gemeinde" => $gemeinde));
+endforeach;
 get_footer();
 ?>
