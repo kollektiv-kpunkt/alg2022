@@ -141,6 +141,16 @@ $gemeinde = get_queried_object();
     </div>
 </div>
 
+<div class="alg-gemeinde-aktuelles-wrapper sm-container">
+    <h3 class="mt-16 mb-8">Aktuelles aus <?= $taxonomy->name ?></h3>
+    <?php
+    get_template_part( "template-parts/aktuelles/index", "", array(
+            "category_slug" => $taxonomy->slug,
+            "ppp" => 2
+    ) );
+    ?>
+</div>
+
 <?php
 $elements = explode(",", get_field("add_elements", $gemeinde));
 foreach($elements as $element) :

@@ -12,6 +12,14 @@ if (isset($args["category"])) {
     $query_args["cat"] = $args["category"];
 }
 
+if (isset($args["category_slug"])) {
+    $query_args["category_name"] = $args["category_slug"];
+}
+
+if (isset($args["ppp"])) {
+    $query_args["posts_per_page"] = $args["ppp"];
+}
+
 // The Query
 $query = new WP_Query( $query_args );
 
